@@ -44,3 +44,19 @@ def gen_cuadrados(n):
 resultado = gen_cuadrados(10)
 print(resultado)
 
+#Crear una lista con todos los numeros pares 
+# desde el 0 hasta el 20 y otra con los impares
+
+def listas (n):
+    pares = []
+    impares = []
+    
+    for number in range(1, n + 1):
+        if number % 2 == 0:
+            pares.append(number)
+        elif number % 2 != 0:
+            impares.append(number)
+    return(pares, impares)
+     
+resultado = listas(20)
+print(resultado)

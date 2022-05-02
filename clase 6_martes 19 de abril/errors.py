@@ -13,6 +13,6 @@ else:
 finally:
     print("siempre se imprimira")
 
-x = 30
+x = 26
 if x < 5:
     raise Exception("EL numero debe ser mayor que 5 para que funcion")
