@@ -10,9 +10,11 @@ with os.scandir("directory") as entries:
 
 from pathlib import Path
 
-entries = Path("my_directory")
-# for entry in entries.iterdir():
-#     print(entry.name)
+entries = Path("directory")
+
+for entry in entries.iterdir():
+    #print(entry.name)
+    pass
 
 # os.listdir() Retorna una lista de todos los archivos en el directorio
 # os.scandir() Retorna un iterador  de todos los objetos en un directorio
@@ -20,20 +22,21 @@ entries = Path("my_directory")
 # pathlib.Path.iterdir() Retorna un iterador de todos los objetos
 # en un dricetorio incluynedo informacion del arhcivo
 
-base_path = "my_directory"
-# for entry in os.listdir(base_path):
-#     if os.path.isfile(os.path.join(base_path,entry)):
-#         print(entry)
+base_path = "directory"
+
+for entry in os.listdir(base_path):
+    if os.path.isfile(os.path.join(base_path,entry)):
+        print(entry)
 
 
-base_path = "my_directory"
+base_path = "directory"
 with os.scandir(base_path) as entries:
     for entry in entries:
         if entry.is_file():
             # print(entry.name)
             pass
 
-base_path = "my_directory"
+base_path = "directory"
 for entry in os.listdir(base_path):
     if os.path.isdir(os.path.join(base_path, entry)):
         new_path = os.path.join(base_path, entry)
@@ -48,18 +51,18 @@ with os.scandir(base_path) as entries:
             # print(entry.name)
             pass
 
-basepath = Path("my_directory")
+basepath = Path("directory")
 for entry in basepath.iterdir():
     if entry.is_dir():
         # print(entry.name)
         pass
 
-with os.scandir("my_directory") as dir_contents:
+with os.scandir("directory") as dir_contents:
     for entry in dir_contents:
         info = entry.stat()
         # print(info.st_mtime)
 
-current_dir = Path("my_directory")
+current_dir = Path("directory")
 for path in current_dir.iterdir():
     info = path.stat()
     # print(info.st_mtime)
