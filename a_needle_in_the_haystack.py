@@ -23,10 +23,7 @@ Example(Input --> Output)
 
 # def a function with a list as a argument: findNeedle(haystack).
 def find_needle(haystack:str='') -> str:
-# create a ver to storw the index() method to find the index with
-# a especific content: haystack.index('needle').
     needle_ind= haystack.index('needle')
-#return a string formatting including the specified text and the index number.
     return (f'found the needle at position {needle_ind}')
 
 # Example:
